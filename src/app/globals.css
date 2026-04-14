@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
+/*
+  Design reference: 2160 × 3840 px (9:16 portrait, exhibition touch screen)
+  Scale factor: 1 design-px = (100 / 2160)vw = 0.04630vw
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-dark: #0e0f27;
+  --color-brand-lime: #d3e978;
+  --color-card-bg: #f3f3f7;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-archivo), Archivo, sans-serif;
+  color: var(--color-brand-dark);
+  background: #ffffff;
+}
+
+/* Suppress ligatures on display headings (matches Figma font-feature-settings) */
+.liga-off {
+  font-feature-settings: "liga" off, "clig" off;
+}
+
+/* CTA button glow shadow, scaled from 100px blur in 2160px design */
+.cta-shadow {
+  box-shadow: 0 0 4.63vw 0 #0e0f27;
 }
