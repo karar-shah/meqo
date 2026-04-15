@@ -27,7 +27,7 @@ export default function CoffeeBar() {
       </svg>
 
       <p className="text-[2.593vw] leading-[110%] text-center text-[#0E0F27]">
-        <strong className="font-semibold">Live-Demo und Kaffee –&nbsp;</strong>
+        <strong className="font-semibold">Live-Demo und Kaffee &ndash; &nbsp;</strong>
         <span className="font-normal">Sprechen Sie uns gerne an.</span>
       </p>
     </div>
