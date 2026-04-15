@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 /*
   Design reference: 2160 × 3840 px (9:16 portrait, exhibition touch screen)
   Scale factor: 1 design-px = (100 / 2160)vw = 0.04630vw
 */
 
 :root {
+  color-scheme: light;
   --color-brand-dark: #0e0f27;
   --color-brand-lime: #d3e978;
   --color-card-bg: #f3f3f7;

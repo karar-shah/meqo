@@ -21,7 +21,7 @@ export default function HeroSection() {
         </h1>
 
         <p className="w-full text-center font-light text-[2.593vw] leading-[150%] text-[#0E0F27]">
-          Intuitiv nutzbare Lösungen für die Gesundheitsversorgung von morgen –
+          Intuitiv nutzbare Lösungen für die Gesundheitsversorgung von morgen &ndash;
           kombiniert mit einer leistungsstarken Plattform zur Erstellung
           individueller Agenten.
         </p>
