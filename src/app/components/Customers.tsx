@@ -3,7 +3,6 @@ import Image from "next/image";
 export default function Customers() {
   return (
     <>
-
       <hr className="w-full border-[#0e0f27]/30 my-[100px]" />
       <div className="w-[1840px] flex flex-col items-center gap-[80px]">
         <h2 className="w-full text-center text-[56px] font-semibold ">

@@ -20,7 +20,7 @@ export default function B01Page() {
   };
 
   return (
-    <>
+    <div className="flex flex-col justify-between w-full flex-1">
       <div className="w-[1840px] flex flex-col items-start gap-[120px] text-left">
         <h1 className="w-full text-[96px] leading-[120%] font-medium">
           MEQO Copilot &ndash; die intelligente Schicht <br /> über Ihrer bestehenden IT
@@ -84,10 +84,10 @@ export default function B01Page() {
       </div>
 
       <div className="w-[1840px] mb-[80px]">
-        <BottomNavigation prevHref="/" nextHref="/b02" />
+        <BottomNavigation showPrev={false} homeHref="/" showNext={true} nextHref="/b02" />
 
         <Customers />
       </div>
-    </>
+    </div>
   );
 }
