@@ -1,65 +1,104 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <div className="w-[1840px] flex flex-col items-start gap-[104px]">
+        <div className="w-full flex flex-col items-center gap-[48px]">
+          <h1 className="w-full relative text-[96px] leading-[120%] font-medium">
+            Entdecken Sie unsere agentenbasierte Versorgungsintelligenz
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="w-[1728px] relative text-[56px] leading-[150%] font-light inline-block">
+            Intuitiv nutzbare Lösungen für die Gesundheitsversorgung von morgen
+            &ndash; kombiniert mit einer leistungsstarken Plattform zur
+            Erstellung individueller Agenten.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="w-[1840px] h-[800px] relative text-left text-[56px]">
+          <div className="absolute top-0 left-0 w-[1840px] h-[800px]">
+            <Image
+              className="absolute top-0 left-0 rounded-[100px] w-[1840px] h-[800px] object-cover"
+              width={1840}
+              height={800}
+              sizes="100vw"
+              alt="Hero Background"
+              src="/images/1.png"
+            />
+            <div className="absolute top-[271px] left-0 backdrop-blur-[30.22px] mask-[linear-gradient(to_bottom,transparent,black)] [-webkit-mask-image:linear-gradient(to_bottom,transparent,black)] rounded-b-[100px] bg-linear-to-b from-[#0e0f27]/0 to-[#0e0f27]/80 w-[1840px] h-[529px]" />
+          </div>
+          <Link
+            href="/d01"
+            className="absolute top-[520px] left-[calc(50%-369px)] shadow-[0px_0px_100px_#0e0f27] rounded-[48px] bg-[#d3e978] h-[180px] flex items-center justify-center py-[32px] px-[64px] box-border gap-[32px] cursor-pointer transition-opacity active:opacity-80 drop-shadow-xl"
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              className="h-[96px] w-[96px] relative"
+              width={96}
+              height={96}
+              sizes="100vw"
+              alt="Cursor Click"
+              src="/icons/cursor-click-02.svg"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="relative leading-[150%] font-semibold">
+              Jetzt ausprobieren
+            </div>
+          </Link>
         </div>
-      </main>
-    </div>
+      </div>
+
+      <div className="w-full flex flex-col items-center gap-[80px]">
+        <div className="w-full flex flex-col items-start gap-[48px]">
+          <h2 className="w-full relative text-[96px] leading-[120%] font-medium">
+            Spürbare Entlastung für Sie, Ihr Team <br />
+            und die gesamte Versorgung
+          </h2>
+          <div className="w-full relative text-[56px] leading-[150%] font-light">
+            MEQO koorperiert mit dem medizinisch zertifizierten Prof. Valmed®.
+          </div>
+        </div>
+        <div className="w-full h-[800px] flex items-center gap-[48px] text-left text-[56px]">
+          <Link
+            href="/b01"
+            className="h-[800px] w-[896px] rounded-[100px] bg-[#f3f3f7] flex flex-col items-center justify-center pt-[120px] pb-0 px-0 box-border gap-[80px] cursor-pointer hover:bg-[#e4e4e9] transition-colors"
+          >
+            <div className="h-[120px] flex flex-col items-start pt-[12px] pb-0 px-0 box-border">
+              <div className="flex flex-col items-center justify-center">
+                <Image
+                  className="w-full h-[107.7px] relative"
+                  width={460}
+                  height={108}
+                  sizes="100vw"
+                  alt="MEQO Logo"
+                  src="/logo-meqo.svg"
+                />
+              </div>
+            </div>
+            <div className="w-full h-[228px] rounded-b-[100px] flex items-center justify-center">
+              <div className="relative underline leading-[96px] font-semibold">
+                Mehr erfahren
+              </div>
+            </div>
+          </Link>
+          <Link
+            href="/b04"
+            className="h-[800px] w-[896px] rounded-[100px] bg-[#f3f3f7] flex flex-col items-center justify-center pt-[120px] px-[120px] pb-0 box-border gap-[80px] cursor-pointer hover:bg-[#e4e4e9] transition-colors"
+          >
+            <Image
+              className="w-[681.7px] relative max-h-full shrink-0"
+              width={682}
+              height={120}
+              sizes="100vw"
+              alt="Prof Valmed Logo"
+              src="/Logo_R 1.svg"
+            />
+            <div className="w-full h-[228px] rounded-b-[100px] flex items-center justify-center shrink-0">
+              <div className="relative underline leading-[96px] font-semibold">
+                Mehr erfahren
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }

@@ -1,0 +1,173 @@
+{
+  "e01": {
+    "category": "Monitoring von Patient:innen",
+    "title": "Intelligente Spracherkennung",
+    "bullets": [
+      "System versteht Sprache und kann Patient:innen identifizieren.",
+      "Agenten überwachen kontinuierlich und verlässlich im Hintergrund."
+    ],
+    "centerImage": "/images/e01a.png"
+  },
+  "e02": {
+    "category": "Monitoring von Patient:innen",
+    "title": "Kontinuierliche Überprüfung",
+    "bullets": [
+      "System überwacht eingehende Laborbefunde und Vitalwerte.",
+      "Prüft kontinuierlich, ob die definierten Kriterien erfüllt sind."
+    ],
+    "centerImage": "/images/e02a.png"
+  },
+  "e03": {
+    "category": "Monitoring von Patient:innen",
+    "title": "Benachrichtigungen",
+    "bullets": [
+      "System benachrichtigt sofort, sobald die Kriterien erfüllt sind.",
+      "Prof. Valmed informiert bei kritischen Verläufen."
+    ],
+    "centerImage": "/images/e03.png"
+  },
+  "e04": {
+    "category": "Monitoring von Patient:innen",
+    "title": "Flexible Nutzung",
+    "bullets": [
+      "Informationen sind mobil und auf allen Endgeräten verfügbar.",
+      "Verbindet Systeme wie KIS, Labor, Radiologie und Vitaldaten."
+    ],
+    "centerImage": "/images/e04.png"
+  },
+  "e05": {
+    "category": "Monitoring von Patient:innen",
+    "title": "Bewertung mit Prof. Valmed",
+    "bullets": [
+      "Prof. Valmed® bewertet den Verlauf in Echtzeit.",
+      "Empfiehlt Maßnahmen - die Entscheidung liegt beim Fachpersonal."
+    ],
+    "centerImage": "/images/e05.png"
+  },
+  "f01": {
+    "category": "KI-gestützte Recherche",
+    "title": "Intelligente Sprachverarbeitung",
+    "bullets": [
+      "Freitextanfragen werden vom System intelligent verarbeitet.",
+      "Patient:innen können so identifiziert werden."
+    ],
+    "centerImage": "/images/f01.png"
+  },
+  "f02": {
+    "category": "KI-gestützte Recherche",
+    "title": "Analyse komplexer Datenquellen",
+    "bullets": [
+      "Berücksichtigt verordnete Medikation des Patienten.",
+      "Diagnoselisten auf Epikrisen in den Briefen von 2003-2026 auf Nierenerkrankungen prüfen."
+    ],
+    "centerImage": "/images/f02.png"
+  },
+  "f03": {
+    "category": "KI-gestützte Recherche",
+    "title": "Kompakte Zusammenfassung",
+    "bullets": [
+      "Komplette Fälle können auf Knopfdruck zusammengefasst werden.",
+      "Ursprung der Informationen und Quellen sind nachvollziehbar."
+    ],
+    "centerImage": "/images/f03.png"
+  },
+  "f04": {
+    "category": "KI-gestützte Recherche",
+    "title": "Anbindung externer Datenquellen",
+    "bullets": [
+      "Integration der Arzneimitteldaten von Vidal MMI.",
+      "Bewertung durch den Vidal MMI AMTS-Service z.B. via MCP."
+    ],
+    "centerImage": "/images/f04.png"
+  },
+  "f05": {
+    "category": "KI-gestützte Recherche",
+    "title": "Abruf der richtigen Informationen",
+    "bullets": [
+      "Schnelle und zielgerichtete Suche der passenden Informationen.",
+      "Vollständige Quellen aufrufbar (z.B. Fachinformationen)."
+    ],
+    "centerImage": "/images/f05.png"
+  },
+  "f06": {
+    "category": "KI-gestützte Recherche",
+    "title": "Kompakte Zusammenfassung",
+    "bullets": [
+      "Mobiler und Web-basierter Zugriff",
+      "Vollständige Quellen aufrufbar (z.B. Fachinformationen)"
+    ],
+    "centerImage": "/images/f06.png"
+  },
+  "g01": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Identifikation von Beteiligten",
+    "bullets": [
+      "System identifiziert Patient:innen und beteiligte Akteure.",
+      "Einfache Kommunikation mit verschiedensten Akteuren."
+    ],
+    "centerImage": "/images/g01.png"
+  },
+  "g02": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Automatische Nachrichtenvorschläge",
+    "bullets": [
+      "System entwirft automatisch passende Nachrichten.",
+      "Nachrichten werden automatisch erstellt und ausformuliert."
+    ],
+    "centerImage": "/images/g02.png"
+  },
+  "g03": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Schnelle Absprachen",
+    "bullets": [
+      "Interdisziplinäre Absprachen ganz ohne Telefonate.",
+      "Klinische Kommunikation so einfach wie WhatsApp."
+    ],
+    "centerImage": "/images/g03.png"
+  },
+  "g04": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Einfaches Antworten",
+    "bullets": [
+      "Antworten können mit wenigen Klicks erfolgen.",
+      "Direkter Versand - so einfach wie intern."
+    ],
+    "centerImage": "/images/g04.png"
+  },
+  "g05": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Intelligente Handlungsoptionen",
+    "bullets": [
+      "Passende Handlungsoptionen werden automatisiert vorgeschlagen.",
+      "Geeignete Maßnahmen und Abfragen werden vorgeschlagen."
+    ],
+    "centerImage": "/images/g05.png"
+  },
+  "g06": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Kommunikation mit Patient:innen",
+    "bullets": [
+      "Interaktion zwischen Klinik und Patient:innen mit wenigen Klicks.",
+      "Services für Patient:innen und ihre Angehörigen."
+    ],
+    "centerImage": "/images/g06.png"
+  },
+  "g07": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Patienten-App und Portal",
+    "bullets": [
+      "Patient:innen finden alles Wichtige in der App oder dem Portal.",
+      "Strukturierte Kommunikation entlastet alle Beteiligten."
+    ],
+    "centerImage": "/images/g07.png"
+  },
+  "g08": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Strukturierte Interaktion",
+    "bullets": [
+      "Absprachen sind automatisch dokumentiert und nachvollziehbar.",
+      "Mobiler und Web-basierter Zugriff."
+    ],
+    "centerImage": "/images/g08.png"
+  }
+}
