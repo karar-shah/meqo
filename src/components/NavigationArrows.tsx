@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useCallback, useState } from "react";
 import { getNext, getPrev } from "@/lib/navigation";
+import Image from "next/image";
 
 const SWIPE_THRESHOLD = 80; // px to trigger navigation
 
@@ -107,6 +108,77 @@ export default function NavigationArrows() {
   }, [handleTouchStart, handleTouchMove, handleTouchEnd, resetIdle]);
 
   // ── Render: only the bare chevron, no box ───────────────────────────────
+  const isDynamicRoute = /^\/[efg]\d{2}$/i.test(pathname);
+
+  if (isDynamicRoute) {
+    return (
+      <>
+        {prev && (
+          <div
+            onClick={() => router.push(prev)}
+            style={{
+              width: "180px",
+              height: "180px",
+              borderRadius: "50%",
+              backgroundColor: "#3e3f51",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "fixed",
+              left: "64px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              cursor: "pointer",
+              zIndex: 200,
+            }}
+          >
+            <Image
+              src="/icons/arrow-left.svg"
+              width={50}
+              height={50}
+              style={{
+                height: "50px",
+                width: "auto",
+              }}
+              alt="Previous"
+            />
+          </div>
+        )}
+        {next && (
+          <div
+            onClick={() => router.push(next)}
+            style={{
+              width: "180px",
+              height: "180px",
+              borderRadius: "50%",
+              backgroundColor: "#3e3f51",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "fixed",
+              right: "64px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              cursor: "pointer",
+              zIndex: 200,
+            }}
+          >
+            <Image
+              src="/icons/arrow-right.svg"
+              width={50}
+              height={50}
+              style={{
+                height: "50px",
+                width: "auto",
+              }}
+              alt="Next"
+            />
+          </div>
+        )}
+      </>
+    );
+  }
+
   const visible = hint !== null;
   const opacity = hint ? 0.3 + hint.progress * 0.7 : 0;
   const scale = hint ? 0.7 + hint.progress * 0.35 : 0.7;

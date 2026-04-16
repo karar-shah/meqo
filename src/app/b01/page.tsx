@@ -33,7 +33,7 @@ export default function B01Page() {
             className="absolute top-0 left-0 w-full h-full object-cover rounded-[100px]"
             width={1840}
             height={1035}
-            src="/vid_1_short.mp4"
+            src="/vid_1_short_comp.mp4"
             poster="/images/video_thumbnail.png"
             controls={isPlaying}
             preload="none"
