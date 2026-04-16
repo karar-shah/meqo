@@ -82,7 +82,7 @@ export default function NavigationArrows() {
     if (idleRef.current) clearTimeout(idleRef.current);
     idleRef.current = setTimeout(() => {
       if (window.location.pathname !== "/") router.push("/");
-    }, 60_000);
+    }, 120_000);
   }, [router]);
 
   // ── Attach listeners ────────────────────────────────────────────────────
