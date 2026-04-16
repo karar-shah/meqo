@@ -1,19 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useCallback } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function B02Page() {
-    const router = useRouter();
-
-    const onAllExamplesClick = useCallback(() => {
-        router.push("/b03");
-    }, [router]);
-
-    const onHomeClick = useCallback(() => {
-        router.push("/");
-    }, [router]);
 
     const checklist = [
         {
@@ -100,9 +88,10 @@ export default function B02Page() {
                 </div>
 
                 <div className="w-full flex flex-row items-center justify-center gap-[64px] text-[56px]">
-                    <div
+                    <Link
+                        href={"/b03"}
                         className="h-[180px] w-[592px] rounded-[48px] bg-[#0e0f27] flex items-center justify-center px-[64px] box-border gap-[32px] cursor-pointer text-white transition-opacity hover:opacity-90"
-                        onClick={onAllExamplesClick}
+
                     >
                         <div className="h-[96px] w-[96px] shrink-0 flex items-center justify-center relative">
                             <Image
@@ -114,11 +103,12 @@ export default function B02Page() {
                             />
                         </div>
                         <div className="relative leading-[150%] font-semibold whitespace-nowrap">Alle Beispiele</div>
-                    </div>
+                    </Link>
 
-                    <div
+                    <Link
+                        href={"/"}
                         className="h-[180px] w-[592px] rounded-[48px] border-4 border-[#0e0f27] bg-white flex items-center justify-center px-[64px] box-border gap-[32px] cursor-pointer text-[#0e0f27] transition-colors hover:bg-gray-50"
-                        onClick={onHomeClick}
+
                     >
                         <div className="h-[96px] w-[96px] shrink-0 flex items-center justify-center relative">
                             <Image
@@ -130,7 +120,7 @@ export default function B02Page() {
                             />
                         </div>
                         <div className="relative leading-[150%] font-semibold whitespace-nowrap">Startseite</div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
