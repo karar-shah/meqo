@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BottomNavigation from "@/components/BottomNavigation";
-import Customers from "../components/Customers";
+import Customers from "../../components/Customers";
 
 export default function B02Page() {
   const checklistItems = [

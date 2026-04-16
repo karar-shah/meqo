@@ -59,7 +59,7 @@ export default function D01Page() {
           </Link>
         </div>
       </div>
-      <BottomNavigation theme="dark" position="absolute" showGrid={true} />
+      <BottomNavigation theme="dark" position="absolute" showGrid={false} />
     </div>
   );
 }

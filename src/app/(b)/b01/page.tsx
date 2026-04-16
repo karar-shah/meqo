@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import BottomNavigation from "@/components/BottomNavigation";
-import Customers from "../components/Customers";
+import Customers from "../../components/Customers";
 import { useRef, useState } from "react";
 
 export default function B01Page() {
@@ -28,9 +28,17 @@ export default function B01Page() {
 
         {/* Video Player Area */}
         <div className="w-full h-[1035px] relative rounded-[100px] overflow-hidden transform-gpu [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
+          {/* Custom styles to scale up native video controls for 43" 4K touch display */}
+          <style dangerouslySetInnerHTML={{
+            __html: `
+            .kiosk-video::-webkit-media-controls-panel {
+              zoom: 2; /* Makes the play/pause, timeline, and mute buttons larger */
+            }
+          `}} />
+
           <video
             ref={videoRef}
-            className="absolute top-0 left-0 w-full h-full object-cover rounded-[100px]"
+            className="kiosk-video absolute top-0 left-0 w-full h-full object-cover rounded-[100px]"
             width={1840}
             height={1035}
             src="/vid_1_short_comp.mp4"
