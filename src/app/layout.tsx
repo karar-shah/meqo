@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import KioskShell from "@/components/KioskShell";
+
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -65,16 +67,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`light ${archivo.variable}`} style={{ colorScheme: 'light' }}>
-      <body className="min-h-screen flex flex-col bg-gray-100 font-sans text-[56px] text-[#0e0f27] antialiased">
+      <body className="min-h-screen flex flex-col bg-gray-100 font-sans text-[56px] text-[#0e0f27] antialiased select-none" style={{ overscrollBehavior: 'none' }}>
         <div className="relative w-full max-w-[2160px] mx-auto min-h-[3840px] bg-white text-center shadow-2xl overflow-hidden flex flex-col">
           <Header />
-          {/* Global layout margin and spacing from test/page.tsx */}
+          {/* position:relative on the container above means the absolute arrows anchor here */}
           <main className="flex-1 w-full px-[160px] pt-[355px] pb-[180px] flex flex-col items-center gap-[220px]">
-            {children}
+            <KioskShell>
+              {children}
+            </KioskShell>
           </main>
           <Footer />
         </div>
       </body>
+
     </html>
   );
 }

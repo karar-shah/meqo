@@ -35,3 +35,21 @@ body {
   margin: 0;
   line-height: normal;
 }
+
+/* ── Kiosk touch optimizations ── */
+/* Prevent pull-to-refresh and overscroll bounce */
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent text selection during swipes */
+.select-none {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Prevent tap-highlight on mobile chrome */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
