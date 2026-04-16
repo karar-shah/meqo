@@ -89,7 +89,7 @@ export default function B02Page() {
 
                 <div className="w-full flex flex-row items-center justify-center gap-[64px] text-[56px]">
                     <Link
-                        href={"/b03"}
+                        href={"/d01"}
                         className="h-[180px] w-[592px] rounded-[48px] bg-[#0e0f27] flex items-center justify-center px-[64px] box-border gap-[32px] cursor-pointer text-white transition-opacity hover:opacity-90"
 
                     >
