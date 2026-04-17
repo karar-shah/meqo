@@ -22,13 +22,24 @@ export default async function DynamicFeaturePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const lowerSlug = slug.toLowerCase();
+
   const feature = (featuresData as Record<string, FeatureData>)[
-    slug.toLowerCase()
+    lowerSlug
   ];
 
   if (!feature) {
     notFound();
   }
+
+  // Determine if this is the last page of the current route matching the prefix
+  const allSlugs = Object.keys(featuresData);
+  const currentPrefix = lowerSlug.charAt(0);
+  const slugsWithPrefix = allSlugs
+    .filter((s) => s.toLowerCase().startsWith(currentPrefix))
+    .sort();
+  const isEndPage = slugsWithPrefix[slugsWithPrefix.length - 1] === lowerSlug;
+
 
   return (
     <FeatureView
@@ -36,6 +47,7 @@ export default async function DynamicFeaturePage({
       title={feature.title}
       bullets={feature.bullets}
       centerImage={feature.centerImage}
+      isEndPage={isEndPage}
     />
   );
 }

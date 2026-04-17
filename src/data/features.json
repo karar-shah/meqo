@@ -44,6 +44,12 @@
     ],
     "centerImage": "/images/e05.png"
   },
+  "e06": {
+    "category": "",
+    "title": "Entdecken Sie, was noch möglich ist &ndash; mit weiteren Flows und Beispiel-Prompts.",
+    "bullets": [    ],
+    "centerImage": "/images/e06-card.png"
+  },
   "f01": {
     "category": "KI-gestützte Recherche",
     "title": "Intelligente Sprachverarbeitung",
@@ -97,6 +103,12 @@
       "Vollständige Quellen aufrufbar (z.B. Fachinformationen)"
     ],
     "centerImage": "/images/f06.png"
+  },
+  "f07": {
+    "category": "KI-gestützte Recherche",
+    "title": "Entdecken Sie, was noch möglich ist &ndash; mit weiteren Flows und Beispiel-Prompts.",
+    "bullets": [],
+    "centerImage": "/images/f05-card.png"
   },
   "g01": {
     "category": "Kommunikation & Zusammenarbeit",
@@ -169,5 +181,11 @@
       "Mobiler und Web-basierter Zugriff."
     ],
     "centerImage": "/images/g08.png"
+  },
+  "g09": {
+    "category": "Kommunikation & Zusammenarbeit",
+    "title": "Entdecken Sie, was noch möglich ist &ndash; mit weiteren Flows und Beispiel-Prompts.",
+    "bullets": [],
+    "centerImage": "/images/g09-card.png"
   }
 }
