@@ -55,7 +55,7 @@ export default function Page() {
             und die gesamte Versorgung
           </h2>
           <div className="w-full relative text-[56px] leading-[150%] font-light">
-            MEQO koorperiert mit dem medizinisch zertifizierten Prof. Valmed®.
+            MEQO kooperiert mit dem medizinisch zertifizierten Prof. Valmed®.
           </div>
         </div>
         <div className="w-full h-[800px] flex items-center gap-[48px] text-left text-[56px]">
