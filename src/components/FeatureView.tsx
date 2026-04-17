@@ -6,6 +6,7 @@ interface FeatureViewProps {
   title: string;
   bullets: string[];
   centerImage: string;
+  isEndPage?: boolean;
 }
 
 export default function FeatureView({
@@ -13,7 +14,32 @@ export default function FeatureView({
   title,
   bullets,
   centerImage,
+  isEndPage,
 }: FeatureViewProps) {
+  if (isEndPage) {
+    return (
+      <>
+        {/* End Page Main Content */}
+        <div className="absolute top-[1126px] left-1/2 -translate-x-1/2 flex flex-col items-center z-10 w-full">
+          <Image
+            src={centerImage}
+            alt="Feature Card"
+            width={1363}
+            height={1490}
+            className="w-[1363px] h-[1490px] object-cover"
+          />
+          <div
+            className="mt-[350px] w-[1515px] h-[192px] relative text-[80px] leading-[120%] font-medium font-['Archivo'] text-white text-center inline-block"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+        </div>
+
+        {/* Bottom Navigation */}
+        <BottomNavigation theme="dark" position="absolute" showGrid={true} />
+      </>
+    );
+  }
+
   return (
     <>
       {/* Wrapper inside main that takes the standard width */}
@@ -25,9 +51,7 @@ export default function FeatureView({
             <div className="text-[56px] leading-[150%] font-semibold">
               {category}
             </div>
-            <div className="text-[96px] leading-[120%] font-medium text-white">
-              {title}
-            </div>
+            <div className="text-[96px] leading-[120%] font-medium text-white" dangerouslySetInnerHTML={{ __html: title }} />
           </div>
           <div className="flex flex-col gap-[32px] text-white">
             {bullets.map((bullet, idx) => (
