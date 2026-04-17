@@ -55,6 +55,7 @@ export default function B03Page() {
               sizes="100vw"
               alt="Hero Background"
               src="/images/1.png"
+              priority
             />
             <div className="absolute top-[271px] left-0 backdrop-blur-[30.22px] mask-[linear-gradient(to_bottom,transparent,black)] [-webkit-mask-image:linear-gradient(to_bottom,transparent,black)] rounded-b-[100px] bg-linear-to-b from-[#0e0f27]/0 to-[#0e0f27]/80 w-[1840px] h-[529px]" />
           </div>
