@@ -25,13 +25,15 @@ export default function NavBar(props: NavBarProps) {
           width={460}
           height={110}
           className={`h-[110px] w-auto relative ${filterClass}`}
+          style={{ width: "auto" }}
         />
         <Image
           src={isDarkPage ? "/Logo_R 2.svg" : "/Logo_R 1.svg"}
           alt="Prof Valmed"
           width={625}
           height={115}
-          className={`h-[115px] w-auto relative`}
+          className="h-[115px] w-auto relative"
+          style={{ width: "auto" }}
         />
       </div>
     </header>

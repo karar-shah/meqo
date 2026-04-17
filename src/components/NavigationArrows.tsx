@@ -136,10 +136,6 @@ export default function NavigationArrows() {
               src="/icons/arrow-left.svg"
               width={50}
               height={50}
-              style={{
-                height: "50px",
-                width: "auto",
-              }}
               alt="Previous"
             />
           </div>
@@ -167,10 +163,6 @@ export default function NavigationArrows() {
               src="/icons/arrow-right.svg"
               width={50}
               height={50}
-              style={{
-                height: "50px",
-                width: "auto",
-              }}
               alt="Next"
             />
           </div>

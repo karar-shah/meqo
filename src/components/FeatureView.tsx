@@ -27,6 +27,8 @@ export default function FeatureView({
             width={1363}
             height={1490}
             className="w-[1363px] h-[1490px] object-cover"
+            priority
+            loading="eager"
           />
           <div
             className="mt-[350px] w-[1515px] h-[192px] relative text-[80px] leading-[120%] font-medium font-['Archivo'] text-white text-center inline-block"
@@ -80,6 +82,7 @@ export default function FeatureView({
           width={1067}
           height={2048}
           className="w-auto h-[2048px] object-cover pointer-events-auto rounded-t-[53px]"
+          priority
         />
 
 
