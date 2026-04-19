@@ -5,7 +5,7 @@ import BottomNavigation from "@/components/BottomNavigation";
 export default function D01Page() {
   return (
     <div className="flex flex-col w-full items-center flex-1 text-white ">
-      <div className="w-full max-w-5xl flex flex-col items-center gap-6 md:gap-8 lg:gap-12 mt-12 md:mt-16 ">
+      <div className="w-full max-w-5xl flex flex-col items-start gap-6 md:gap-8 lg:gap-12 mt-12 md:mt-36 ">
         <h1 className="w-full text-xl md:text-2xl lg:text-3xl leading-tight font-semibold text-center text-[#d3e978]">
           Wählen Sie einen Prompt aus:
         </h1>

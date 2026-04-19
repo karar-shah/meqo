@@ -116,28 +116,28 @@ export default function NavigationArrows() {
         {prev && (
           <div
             onClick={() => router.push(prev)}
-            className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#3e3f51] flex items-center justify-center fixed left-4 md:left-8 top-1/2 -translate-y-1/2 cursor-pointer z-[200]"
+            className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#3e3f51] flex items-center justify-center fixed left-4 md:left-8 top-1/2 -translate-y-1/2 cursor-pointer z-[200]"
           >
             <Image
               src="/icons/arrow-left.svg"
-              width={24}
-              height={24}
+              width={16}
+              height={16}
               alt="Previous"
-              className="md:w-8 md:h-8"
+              className="md:w-5 md:h-5"
             />
           </div>
         )}
         {next && (
           <div
             onClick={() => router.push(next)}
-            className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#3e3f51] flex items-center justify-center fixed right-4 md:right-8 top-1/2 -translate-y-1/2 cursor-pointer z-[200]"
+            className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#3e3f51] flex items-center justify-center fixed right-4 md:right-8 top-1/2 -translate-y-1/2 cursor-pointer z-[200]"
           >
             <Image
               src="/icons/arrow-right.svg"
-              width={24}
-              height={24}
+              width={16}
+              height={16}
               alt="Next"
-              className="md:w-8 md:h-8"
+              className="md:w-5 md:h-5"
             />
           </div>
         )}

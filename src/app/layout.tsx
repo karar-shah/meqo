@@ -51,7 +51,7 @@ export default function RootLayout({
         <ThemeWrapper>
           <NavBar />
           {/* position:relative on the container above means the absolute arrows anchor here */}
-          <main className="flex-1 min-h-0 max-w-7xl mx-auto w-full px-4 md:px-6 mt-12 md:mt-14 pt-2 pb-2 md:pb-4 flex flex-col items-center gap-4 md:gap-6 overflow-y-auto">
+          <main className="flex-1 min-h-0 max-w-[789px] mx-auto w-full px-4 md:px-6 mt-20 md:mt-24 pt-2 pb-2 md:pb-4 flex flex-col items-center overflow-hidden">
             <KioskShell>
               {children}
             </KioskShell>

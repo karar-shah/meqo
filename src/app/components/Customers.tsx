@@ -5,7 +5,7 @@ export default function Customers() {
     <>
       <hr className="w-full border-[#0e0f27]/30 my-8 md:my-12 lg:my-16" />
       <div className="w-full max-w-5xl self-center flex flex-col items-center gap-6 md:gap-8 lg:gap-12">
-        <h2 className="w-full text-center text-2xl md:text-3xl lg:text-4xl font-semibold ">
+        <h2 className="w-full text-center text-xl md:text-2xl lg:text-3xl font-semibold text-[#0e0f27]">
           Unsere wichtigsten Kunden
         </h2>
         <div className="w-full relative flex items-center justify-center flex-wrap gap-8 md:gap-12 lg:gap-16">

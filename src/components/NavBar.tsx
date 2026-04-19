@@ -18,7 +18,7 @@ export default function NavBar(props: NavBarProps) {
 
   return (
     <header className="absolute top-0 left-0 w-full z-50 flex justify-center pt-3 md:pt-4">
-      <div className="w-full max-w-7xl px-4 md:px-6 flex justify-between items-center">
+      <div className="w-full max-w-[789px] px-4 md:px-6 flex justify-between items-center">
         <Image
           src="/logo-meqo.svg"
           alt="MEQO"

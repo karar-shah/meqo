@@ -40,14 +40,14 @@ export default function BottomNavigation({
   const iconFilter = isDark ? "brightness-0 invert" : "";
 
   // The centered bordered button style (Home, Grid)
-  const borderedButtonClass = `flex items-center justify-center gap-2 md:gap-3 h-9 md:h-10 w-full max-w-[200px] md:max-w-[240px] rounded-xl border md:border-2 transition-colors ${isDark ? "border-white bg-[#0e0f27]/0" : "border-[#0e0f27]"
+  const borderedButtonClass = `flex items-center justify-center gap-2 h-10 md:h-11 px-4 md:px-6 w-max min-w-[140px] md:min-w-[180px] rounded-xl border md:border-2 transition-colors ${isDark ? "border-white bg-[#0e0f27]/0" : "border-[#0e0f27]"
     } ${hoverBg} ${generalText}`;
 
   // The unbordered button style (Prev, Next)
-  const plainButtonClass = `flex items-center gap-2 md:gap-3 h-9 md:h-10 py-2 px-3 md:px-4 rounded-xl transition-colors ${hoverBg} ${generalText}`;
+  const plainButtonClass = `flex items-center gap-2 h-10 md:h-11 py-1 px-3 md:px-4 rounded-xl transition-colors ${hoverBg} ${generalText}`;
 
   const containerClass = position === "absolute"
-    ? "relative mt-4 lg:mt-6 w-full flex justify-center items-center gap-4 md:gap-6"
+    ? "relative w-full flex justify-center items-center gap-4 md:gap-6 mt-auto pb-4 z-50 shrink-0"
     : "w-full max-w-7xl mx-auto flex items-center justify-between pt-3 md:pt-4 px-4";
 
   return (

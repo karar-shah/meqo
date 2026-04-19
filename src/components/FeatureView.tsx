@@ -20,7 +20,7 @@ export default function FeatureView({
     return (
       <>
         {/* End Page Main Content */}
-        <div className="absolute top-[40vh] left-1/2 -translate-x-1/2 flex flex-col items-center z-10 w-full max-w-4xl">
+        <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10 w-full max-w-4xl">
           <Image
             src={centerImage}
             alt="Feature Card"
@@ -48,24 +48,24 @@ export default function FeatureView({
       <div className="w-full max-w-7xl flex flex-col sm:flex-row text-left font-['Archivo'] relative z-0 items-center justify-between gap-8 md:gap-12 h-full min-h-[60vh]">
 
         {/* Texts Section */}
-        <div className="flex flex-col gap-6 md:gap-8 text-[#d3e978] w-full max-w-2xl flex-1 z-20">
+        <div className="flex flex-col gap-4 md:gap-6 text-[#d3e978] w-full md:w-[420px] shrink-0 relative z-30">
           <div className="flex flex-col gap-2">
-            <div className="text-xl md:text-2xl leading-tight font-semibold">
+            <div className="text-base md:text-lg leading-tight font-semibold">
               {category}
             </div>
-            <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-medium text-white" dangerouslySetInnerHTML={{ __html: title }} />
+            <div className="text-xl md:text-2xl lg:text-3xl leading-tight font-medium text-white" dangerouslySetInnerHTML={{ __html: title }} />
           </div>
-          <div className="flex flex-col gap-4 md:gap-6 text-white mt-4 md:mt-8">
+          <div className="flex flex-col gap-3 md:gap-5 text-white mt-2 md:mt-4">
             {bullets.map((bullet, idx) => (
-              <div key={idx} className="flex items-center gap-4 md:gap-6">
+              <div key={idx} className="flex items-center gap-3 md:gap-4">
                 <Image
                   src="/icons/check-circle-broken-green.svg"
                   alt="Check"
                   width={96}
                   height={96}
-                  className="w-8 h-8 md:w-10 md:h-10 shrink-0"
+                  className="w-5 h-5 md:w-6 md:h-6 shrink-0"
                 />
-                <div className="flex-1 text-base md:text-lg lg:text-xl xl:text-2xl leading-snug font-light">
+                <div className="flex-1 text-sm md:text-base lg:text-lg leading-snug font-light">
                   {bullet}
                 </div>
               </div>
@@ -74,13 +74,13 @@ export default function FeatureView({
         </div>
 
         {/* Center Image Section - absolute positioning relative to ThemeWrapper */}
-        <div className="flex-1 flex max-w-xl h-full items-center justify-center overflow-hidden z-10 pointer-events-none relative rounded-t-3xl md:rounded-t-[3rem] bg-[#0e0f27] mt-[10vh]">
+        <div className="flex-1 flex max-w-none h-full w-full items-center justify-end overflow-visible z-10 pointer-events-none relative rounded-t-3xl md:rounded-t-[3rem] bg-[#0e0f27] mt-[10vh] lg:-mr-28 mb-24">
           <Image
             src={centerImage}
             alt={title}
             width={1067}
             height={2048}
-            className="w-full h-auto max-h-[70vh] object-contain pointer-events-auto rounded-t-3xl md:rounded-t-[3rem]"
+            className="w-full max-w-full md:w-[140%] md:max-w-[140%] h-auto min-h-[700px] max-h-[110vh] md:max-h-[130vh] object-contain object-right pointer-events-auto rounded-t-3xl md:rounded-t-[3rem]"
             priority
           />
         </div>
