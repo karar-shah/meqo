@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="w-full h-full flex flex-col justify-between gap-4 pb-2 md:pb-4">
+    <div className="w-full flex-1 flex flex-col justify-between gap-4 pb-2 md:pb-4">
       <div className="w-full flex flex-col items-center gap-4 md:gap-6 flex-1 min-h-0">
         <div className="w-full flex flex-col items-center gap-2 md:gap-3 shrink-0">
           <h1 className="w-full relative text-2xl md:text-3xl lg:text-4xl leading-tight font-semibold text-center">
