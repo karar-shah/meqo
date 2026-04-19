@@ -10,7 +10,7 @@ export default function ThemeWrapper({ children }: { children: ReactNode }) {
 
   return (
     <div
-      className={`relative w-full min-h-screen text-center flex flex-col transition-colors duration-300 ${
+      className={`relative w-full h-full text-center flex flex-col transition-colors duration-300 ${
         isDarkPage ? "bg-[#0e0f27] text-white" : "bg-white text-[#0e0f27]"
       }`}
     >

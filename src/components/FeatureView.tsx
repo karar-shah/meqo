@@ -20,18 +20,18 @@ export default function FeatureView({
     return (
       <>
         {/* End Page Main Content */}
-        <div className="absolute top-[1126px] left-1/2 -translate-x-1/2 flex flex-col items-center z-10 w-full">
+        <div className="absolute top-[40vh] left-1/2 -translate-x-1/2 flex flex-col items-center z-10 w-full max-w-4xl">
           <Image
             src={centerImage}
             alt="Feature Card"
             width={1363}
             height={1490}
-            className="w-[1363px] h-[1490px] object-cover"
+            className="w-auto h-[40vh] max-h-[600px] object-contain"
             priority
             loading="eager"
           />
           <div
-            className="mt-[350px] w-[1515px] h-[192px] relative text-[80px] leading-[120%] font-medium font-['Archivo'] text-white text-center inline-block"
+            className="mt-8 md:mt-12 w-full max-w-4xl relative text-2xl md:text-3xl lg:text-4xl leading-tight font-medium text-white text-center inline-block px-4"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </div>
@@ -45,52 +45,46 @@ export default function FeatureView({
   return (
     <>
       {/* Wrapper inside main that takes the standard width */}
-      <div className="w-[1840px] flex flex-col text-left font-['Archivo'] relative z-0">
+      <div className="w-full max-w-7xl flex flex-col sm:flex-row text-left font-['Archivo'] relative z-0 items-center justify-between gap-8 md:gap-12 h-full min-h-[60vh]">
 
         {/* Texts Section */}
-        <div className="flex flex-col gap-[64px] text-[#d3e978] w-full">
-          <div className="flex flex-col gap-[8px]">
-            <div className="text-[56px] leading-[150%] font-semibold">
+        <div className="flex flex-col gap-6 md:gap-8 text-[#d3e978] w-full max-w-2xl flex-1 z-20">
+          <div className="flex flex-col gap-2">
+            <div className="text-xl md:text-2xl leading-tight font-semibold">
               {category}
             </div>
-            <div className="text-[96px] leading-[120%] font-medium text-white" dangerouslySetInnerHTML={{ __html: title }} />
+            <div className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight font-medium text-white" dangerouslySetInnerHTML={{ __html: title }} />
           </div>
-          <div className="flex flex-col gap-[32px] text-white">
+          <div className="flex flex-col gap-4 md:gap-6 text-white mt-4 md:mt-8">
             {bullets.map((bullet, idx) => (
-              <div key={idx} className="flex items-center gap-[48px]">
+              <div key={idx} className="flex items-center gap-4 md:gap-6">
                 <Image
                   src="/icons/check-circle-broken-green.svg"
                   alt="Check"
                   width={96}
                   height={96}
-                  className="w-[96px] h-[96px] shrink-0"
+                  className="w-8 h-8 md:w-10 md:h-10 shrink-0"
                 />
-                <div className="flex-1 text-[56px] leading-[150%] font-light">
+                <div className="flex-1 text-base md:text-lg lg:text-xl xl:text-2xl leading-snug font-light">
                   {bullet}
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
 
-      {/* Center Image Section - absolute positioning relative to ThemeWrapper */}
-      <div className="w-[1067px] max-h-[2048px] flex items-start justify-center overflow-hidden z-10 pointer-events-none relative rounded-t-[53px] bg-[#0e0f27]">
-        <Image
-          src={centerImage}
-          alt={title}
-          width={1067}
-          height={2048}
-          className="w-auto h-[2048px] object-cover pointer-events-auto rounded-t-[53px]"
-          priority
-        />
+        {/* Center Image Section - absolute positioning relative to ThemeWrapper */}
+        <div className="flex-1 flex max-w-xl h-full items-center justify-center overflow-hidden z-10 pointer-events-none relative rounded-t-3xl md:rounded-t-[3rem] bg-[#0e0f27] mt-[10vh]">
+          <Image
+            src={centerImage}
+            alt={title}
+            width={1067}
+            height={2048}
+            className="w-full h-auto max-h-[70vh] object-contain pointer-events-auto rounded-t-3xl md:rounded-t-[3rem]"
+            priority
+          />
+        </div>
 
-
-        {/* Blending div at the bottom of the image */}
-        {/* <div className="absolute -bottom-[1px] -left-[5px] w-[calc(100%+10px)] z-20 pointer-events-none" style={{
-          height: "770px",
-          background: "linear-gradient(0deg, #0e0f27 15px, rgba(14, 15, 39, 0) 100%)",
-        }} /> */}
       </div>
 
       {/* Bottom Navigation */}

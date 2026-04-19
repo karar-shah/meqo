@@ -23,16 +23,16 @@ export const metadata: Metadata = {
 // Extracted Footer Component from test/page
 function Footer() {
   return (
-    <footer className="w-full mt-auto bg-[#d3e978] h-20 md:h-24 lg:h-32 flex items-center justify-center gap-4 md:gap-8 z-50">
+    <footer className="w-full mt-auto bg-[#d3e978] h-10 md:h-12 lg:h-14 flex items-center justify-center gap-2 md:gap-4 z-50">
       <Image
-        className="w-12 md:w-16 h-auto relative"
+        className="w-6 md:w-8 h-auto relative"
         width={64}
         height={64}
         sizes="100vw"
         alt="Coffee Icon"
         src="/icons/coffee.svg"
       />
-      <div className="relative text-lg md:text-xl lg:text-2xl leading-tight text-center text-[#0e0f27]">
+      <div className="relative text-xs md:text-sm lg:text-base leading-tight text-center text-[#0e0f27]">
         <span className="font-semibold">Live-Demo und Kaffee &ndash; </span>
         <span>Sprechen Sie uns gerne an.</span>
       </div>
@@ -47,11 +47,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`light ${archivo.variable}`} style={{ colorScheme: 'light' }}>
-      <body className="min-h-screen flex flex-col bg-gray-100 font-sans text-base antialiased select-none" style={{ overscrollBehavior: 'none' }}>
+      <body className="h-screen flex flex-col bg-gray-100 font-sans text-sm antialiased select-none overflow-hidden" style={{ overscrollBehavior: 'none' }}>
         <ThemeWrapper>
           <NavBar />
           {/* position:relative on the container above means the absolute arrows anchor here */}
-          <main className="flex-1 max-w-7xl mx-auto w-full px-4 md:px-8 mt-24 md:mt-32 pt-8 pb-16 md:pb-24 flex flex-col items-center gap-16 md:gap-24">
+          <main className="flex-1 min-h-0 max-w-7xl mx-auto w-full px-4 md:px-6 mt-12 md:mt-14 pt-2 pb-2 md:pb-4 flex flex-col items-center gap-4 md:gap-6 overflow-y-auto">
             <KioskShell>
               {children}
             </KioskShell>
