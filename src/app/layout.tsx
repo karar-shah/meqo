@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
+
 import KioskShell from "@/components/KioskShell";
 import NavBar from "@/components/NavBar";
 import ThemeWrapper from "@/components/ThemeWrapper";
@@ -23,18 +23,15 @@ export const metadata: Metadata = {
 // Extracted Footer Component from test/page
 function Footer() {
   return (
-    <footer className="w-full mt-auto bg-[#d3e978] h-10 md:h-12 lg:h-14 flex items-center justify-center gap-2 md:gap-4 z-50">
-      <Image
-        className="w-6 md:w-8 h-auto relative"
-        width={64}
-        height={64}
-        sizes="100vw"
-        alt="Coffee Icon"
-        src="/icons/coffee.svg"
-      />
-      <div className="relative text-xs md:text-sm lg:text-base leading-tight text-center text-[#0e0f27]">
-        <span className="font-semibold">Live-Demo und Kaffee &ndash; </span>
-        <span>Sprechen Sie uns gerne an.</span>
+    <footer className="w-full mt-auto bg-[#d3e978] h-10 md:h-12 lg:h-14 flex items-center justify-center z-50">
+      <div className="relative text-xs md:text-sm lg:text-base leading-[1.1] text-center text-[#0e0f27] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
+        <a href="https://www.meqo.de/impressum" target="_blank" rel="noopener noreferrer" className="underline">
+          Impressum
+        </a>
+        <span className="whitespace-pre">        </span>
+        <a href="https://www.meqo.de/datenschutz" target="_blank" rel="noopener noreferrer" className="underline">
+          Datenschutz
+        </a>
       </div>
     </footer>
   );
@@ -47,11 +44,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`light ${archivo.variable}`} style={{ colorScheme: 'light' }}>
-      <body className="flex flex-col bg-gray-100 font-sans text-sm antialiased select-none overflow-x-hidden [@media(min-height:1080px)]:h-screen [@media(min-height:1080px)]:overflow-hidden [@media(max-height:1079px)]:min-h-screen [@media(max-height:1079px)]:overflow-y-auto" style={{ overscrollBehavior: 'none' }}>
+      <body className="flex flex-col bg-gray-100 font-sans text-sm antialiased select-none overflow-x-hidden lg:h-screen lg:overflow-hidden min-h-screen overflow-y-auto" style={{ overscrollBehavior: 'none' }}>
         <ThemeWrapper>
           <NavBar />
           {/* position:relative on the container above means the absolute arrows anchor here */}
-          <main className="flex-1 max-w-[789px] mx-auto w-full px-4 md:px-6 mt-20 md:mt-24 pt-2 pb-2 md:pb-4 flex flex-col items-center [@media(min-height:1080px)]:min-h-0 [@media(min-height:1080px)]:overflow-hidden [@media(max-height:1079px)]:overflow-visible">
+          <main className="flex-1 max-w-[789px] mx-auto w-full px-4 md:px-6 mt-20 md:mt-24 pt-2 pb-2 md:pb-4 flex flex-col items-center lg:min-h-0 lg:overflow-hidden">
             <KioskShell>
               {children}
             </KioskShell>

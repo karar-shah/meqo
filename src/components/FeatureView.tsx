@@ -45,10 +45,10 @@ export default function FeatureView({
   return (
     <>
       {/* Wrapper inside main that takes the standard width */}
-      <div className="w-full max-w-7xl flex flex-col sm:flex-row text-left font-['Archivo'] relative z-0 items-center justify-between gap-8 md:gap-12 flex-1 min-h-[60vh]">
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row text-left font-['Archivo'] relative z-0 items-center justify-start gap-8 lg:gap-12 flex-1 lg:h-full lg:min-h-0">
 
         {/* Texts Section */}
-        <div className="flex flex-col gap-4 md:gap-6 text-[#d3e978] w-full md:w-[420px] shrink-0 relative z-30">
+        <div className="flex flex-col items-center justify-center md:justify-start gap-4 md:gap-6 text-[#d3e978] w-full lg:w-[420px] shrink-0 relative z-30 pt-8 lg:pt-0">
           <div className="flex flex-col gap-2">
             <div className="text-base md:text-lg leading-tight font-semibold">
               {category}
@@ -74,13 +74,13 @@ export default function FeatureView({
         </div>
 
         {/* Center Image Section - absolute positioning relative to ThemeWrapper */}
-        <div className="flex-1 flex max-w-none h-full w-full items-center justify-end overflow-visible z-10 pointer-events-none relative rounded-t-3xl md:rounded-t-[3rem] bg-[#0e0f27] mt-[10vh] lg:-mr-28 mb-24">
+        <div className="flex-1 flex max-w-none h-full w-full items-center justify-center lg:justify-end overflow-visible z-10 pointer-events-none relative rounded-t-3xl md:rounded-t-[3rem] bg-[#0e0f27] mt-[5vh] lg:mt-[5vh] lg:-mr-28 mb-12 lg:mb-0">
           <Image
             src={centerImage}
             alt={title}
             width={1067}
             height={2048}
-            className="w-full max-w-full md:w-[140%] md:max-w-[140%] h-auto min-h-[700px] max-h-[110vh] md:max-h-[130vh] object-contain object-right pointer-events-auto rounded-t-3xl md:rounded-t-[3rem]"
+            className="w-full max-w-full lg:w-[140%] lg:max-w-[140%] h-auto min-h-[400px] lg:min-h-0 max-h-[60vh] lg:max-h-[70vh] object-contain object-center lg:object-right pointer-events-auto rounded-t-3xl md:rounded-t-[3rem] md:[clip-path:inset(0_100px_0_105px)]"
             priority
           />
         </div>
