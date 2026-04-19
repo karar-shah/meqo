@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  Design reference: 2160 × 3840 px (9:16 portrait, exhibition touch screen)
-  Scale factor: 1 design-px = (100 / 2160)vw = 0.04630vw
+  Design reference: Re-authored for standard Desktop Layout
+  Scale factor: Adapted from 2160 × 3840 px to dynamic max flex
 */
 
 :root {
@@ -26,9 +26,9 @@ body {
   font-feature-settings: "liga" off, "clig" off;
 }
 
-/* CTA button glow shadow, scaled from 100px blur in 2160px design */
+/* CTA button glow shadow, scaled for desktop */
 .cta-shadow {
-  box-shadow: 0 0 4.63vw 0 #0e0f27;
+  box-shadow: 0 0 24px 0 #0e0f27;
 }
 
 body {

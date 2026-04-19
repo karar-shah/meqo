@@ -21,24 +21,24 @@ export default function B01Page() {
 
   return (
     <div className="flex flex-col justify-between w-full flex-1">
-      <div className="w-[1840px] flex flex-col items-start gap-[120px] text-left">
-        <h1 className="w-full text-[96px] leading-[120%] font-medium">
+      <div className="w-full max-w-5xl flex flex-col items-start gap-12 md:gap-16 lg:gap-24 text-left">
+        <h1 className="w-full text-3xl md:text-4xl lg:text-5xl leading-tight font-semibold text-[#0e0f27]">
           MEQO Copilot &ndash; die intelligente Schicht <br /> über Ihrer bestehenden IT
         </h1>
 
         {/* Video Player Area */}
-        <div className="w-full h-[1035px] relative rounded-[100px] overflow-hidden transform-gpu [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
-          {/* Custom styles to scale up native video controls for 43" 4K touch display */}
+        <div className="w-full aspect-video md:h-[500px] lg:h-[600px] relative rounded-3xl md:rounded-[48px] overflow-hidden transform-gpu [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
+          {/* Custom styles to scale up native video controls for touch display */}
           <style dangerouslySetInnerHTML={{
             __html: `
             .kiosk-video::-webkit-media-controls-panel {
-              zoom: 2; /* Makes the play/pause, timeline, and mute buttons larger */
+              zoom: 1; /* reset scale for desktop */
             }
           `}} />
 
           <video
             ref={videoRef}
-            className="kiosk-video absolute top-0 left-0 w-full h-full object-cover rounded-[100px]"
+            className="kiosk-video absolute top-0 left-0 w-full h-full object-cover rounded-3xl md:rounded-[48px]"
             width={1840}
             height={1035}
             src="/vid_1_short_comp.mp4"
@@ -62,13 +62,13 @@ export default function B01Page() {
               {/* <div className="absolute inset-0 bg-black/20 mix-blend-multiply" /> */}
 
               {/* Play Button */}
-              <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] rounded-full bg-[#0e0f27]/80 flex items-center justify-center hover:bg-[#0e0f27] transition-colors shadow-2xl">
+              <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#0e0f27]/80 flex items-center justify-center hover:bg-[#0e0f27] transition-colors shadow-2xl">
                 <Image
                   src="/icons/play.svg"
                   alt="Play"
-                  width={144}
-                  height={144}
-                  className="w-[144px] h-[144px] ml-[16px]"
+                  width={64}
+                  height={64}
+                  className="w-12 h-12 md:w-16 md:h-16 ml-2"
                 />
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function B01Page() {
         </div>
 
         {/* Text Content */}
-        <div className="w-full flex flex-col gap-[80px] text-[56px] leading-[150%] font-light">
+        <div className="w-full flex flex-col gap-8 md:gap-12 text-lg md:text-xl lg:text-2xl leading-relaxed font-normal">
           <p>
             MEQO Copilot verbindet Ihre bestehenden Systeme &ndash; <br />
             <span className="font-semibold">KIS, Labor, Radiologie und Vitaldaten</span> &ndash; und macht daraus eine <br />
@@ -91,7 +91,7 @@ export default function B01Page() {
         </div>
       </div>
 
-      <div className="w-[1840px] mb-[80px]">
+      <div className="w-full mx-auto flex flex-col mt-12 md:mt-16 gap-8">
         <BottomNavigation showPrev={false} homeHref="/" showNext={true} nextHref="/b02" />
 
         <Customers />

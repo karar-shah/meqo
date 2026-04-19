@@ -17,14 +17,14 @@ export default function NavBar(props: NavBarProps) {
   const filterClass = isDarkPage ? "brightness-0 invert" : "";
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 flex justify-center pt-[80px]">
-      <div className="w-[1840px] flex justify-between items-center">
+    <header className="absolute top-0 left-0 w-full z-50 flex justify-center pt-8 md:pt-12">
+      <div className="w-full max-w-7xl px-4 md:px-8 flex justify-between items-center">
         <Image
           src="/logo-meqo.svg"
           alt="MEQO"
           width={460}
           height={110}
-          className={`h-[110px] w-auto relative ${filterClass}`}
+          className={`h-12 md:h-16 lg:h-20 w-auto relative ${filterClass}`}
           style={{ width: "auto" }}
         />
         <Image
@@ -32,7 +32,7 @@ export default function NavBar(props: NavBarProps) {
           alt="Prof Valmed"
           width={625}
           height={115}
-          className="h-[115px] w-auto relative"
+          className="h-12 md:h-16 lg:h-20 w-auto relative"
           style={{ width: "auto" }}
         />
       </div>
