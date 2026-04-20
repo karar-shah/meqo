@@ -24,8 +24,8 @@ export default function B02Page() {
 
   return (
     <div className="flex flex-col justify-between w-full flex-1">
-      <div className="w-full flex flex-col items-center gap-4 md:gap-6 text-left">
-        <div className="w-full flex flex-col items-center gap-3 md:gap-4 text-center">
+      <div className="w-full flex flex-col items-start gap-4 md:gap-6 text-left">
+        <div className="w-full flex flex-col items-start gap-3 md:gap-4 text-start">
           <h1 className="w-full text-lg md:text-2xl lg:text-3xl leading-tight font-medium">
             Ihr Agenten-Team &ndash; wie eine Assistenz, die mitdenkt und entlastet
           </h1>

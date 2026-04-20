@@ -14,7 +14,7 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "MEQO &ndash; Agentenbasierte Versorgungsintelligenz",
+  title: "MEQO – Agentenbasierte Versorgungsintelligenz",
   description: "Intuitiv nutzbare Lösungen für die Gesundheitsversorgung von morgen",
 };
 
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 // Extracted Footer Component from test/page
 function Footer() {
   return (
-    <footer className="w-full mt-auto bg-[#d3e978] h-10 md:h-12 lg:h-14 flex items-center justify-center z-50">
+    <footer className="w-full mt-auto bg-[#d3e978] h-10 md:h-12 lg:h-14 flex items-center justify-center z-50 md:sticky md:bottom-0">
       <div className="relative text-xs md:text-sm lg:text-base leading-[1.1] text-center text-[#0e0f27] [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
         <a href="https://www.meqo.de/impressum" target="_blank" rel="noopener noreferrer" className="underline">
           Impressum
