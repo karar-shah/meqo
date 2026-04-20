@@ -11,7 +11,7 @@ export default function Customers() {
         <div className="w-full relative flex items-center justify-center flex-wrap gap-8 md:gap-12 lg:gap-16">
           <div className="h-10 md:h-12 w-auto flex flex-col items-center justify-center">
             <Image
-              className="w-auto h-full relative object-contain opacity-50"
+              className="w-auto h-full relative object-contain opacity-75"
               width={422}
               height={71}
               sizes="100vw"
@@ -21,7 +21,7 @@ export default function Customers() {
           </div>
           <div className="h-10 md:h-12 w-auto flex flex-col items-center justify-center">
             <Image
-              className="h-full w-auto relative object-contain opacity-50"
+              className="h-full w-auto relative object-contain opacity-80"
               width={439}
               height={180}
               sizes="100vw"
@@ -31,8 +31,7 @@ export default function Customers() {
           </div>
           <div className="h-10 md:h-12 w-auto flex flex-col items-center justify-center">
             <Image
-              className="h-full w-auto relative object-contain opacity-50 text-gray-500 fill-gray-500"
-              style={{ filter: "brightness(0) opacity(0.5)" }} // apply a filter to make it look like the others as bottom3.svg might not have opacity baked in or be an svg that accepts coloring easily
+              className="h-full w-auto relative object-contain opacity-85 text-gray-500 fill-gray-500"
               width={415}
               height={180}
               sizes="100vw"
