@@ -40,7 +40,7 @@ export default function BottomNavigation({
   const iconFilter = isDark ? "brightness-0 invert" : "";
 
   // The centered bordered button style (Home, Grid)
-  const borderedButtonClass = `flex items-center justify-center gap-2 h-10 md:h-11 px-4 md:px-6 w-max min-w-[140px] md:min-w-[180px] rounded-xl border md:border-2 transition-colors ${isDark ? "border-white bg-[#0e0f27]/0" : "border-[#0e0f27]"
+  const borderedButtonClass = `flex items-center justify-center gap-2 h-10 md:h-11 px-2 md:px-6 w-max min-w-[100px] md:min-w-[180px] rounded-xl border md:border-2 transition-colors ${isDark ? "border-white bg-[#0e0f27]/0" : "border-[#0e0f27]"
     } ${hoverBg} ${generalText}`;
 
   // The unbordered button style (Prev, Next)
@@ -57,14 +57,14 @@ export default function BottomNavigation({
           {showPrev && (
             <Link href={prevHref} className={plainButtonClass}>
               <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
-                <Image 
-                  src="/icons/arrow-narrow-right.svg" 
-                  alt="Vorherige Seite" 
-                  fill 
-                  className={`object-contain rotate-180 ${iconFilter}`} 
+                <Image
+                  src="/icons/arrow-narrow-right.svg"
+                  alt="Vorherige Seite"
+                  fill
+                  className={`object-contain rotate-180 ${iconFilter}`}
                 />
               </div>
-              <span className="text-sm md:text-base font-semibold leading-relaxed">Vorherige Seite</span>
+              <span className="text-sm md:text-base font-semibold md:leading-relaxed">Vorherige Seite</span>
             </Link>
           )}
         </div>
@@ -74,26 +74,26 @@ export default function BottomNavigation({
         {showGrid && (
           <Link href={gridHref} className={borderedButtonClass}>
             <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
-              <Image 
-                src="/icons/grid-01.svg" 
-                alt="Alle Beispiele" 
-                fill 
-                className={`object-contain ${iconFilter}`} 
+              <Image
+                src="/icons/grid-01.svg"
+                alt="Alle Beispiele"
+                fill
+                className={`object-contain ${iconFilter}`}
               />
             </div>
-            <span className="text-sm md:text-base font-semibold leading-relaxed">Alle Beispiele</span>
+            <span className="text-sm md:text-base font-semibold md:leading-relaxed">Alle Beispiele</span>
           </Link>
         )}
         <Link href={homeHref} className={borderedButtonClass}>
           <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
-            <Image 
-              src="/icons/home-smile.svg" 
-              alt="Startseite" 
-              fill 
-              className={`object-contain ${iconFilter}`} 
+            <Image
+              src="/icons/home-smile.svg"
+              alt="Startseite"
+              fill
+              className={`object-contain ${iconFilter}`}
             />
           </div>
-          <span className="text-sm md:text-base font-semibold leading-relaxed">Startseite</span>
+          <span className="text-sm md:text-base font-semibold md:leading-relaxed">Startseite</span>
         </Link>
       </div>
 
@@ -103,11 +103,11 @@ export default function BottomNavigation({
             <Link href={nextHref} className={plainButtonClass}>
               <span className="text-sm md:text-base font-semibold leading-relaxed">Nächste Seite</span>
               <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
-                <Image 
-                  src="/icons/arrow-narrow-right.svg" 
-                  alt="Nächste Seite" 
-                  fill 
-                  className={`object-contain ${iconFilter}`} 
+                <Image
+                  src="/icons/arrow-narrow-right.svg"
+                  alt="Nächste Seite"
+                  fill
+                  className={`object-contain ${iconFilter}`}
                 />
               </div>
             </Link>

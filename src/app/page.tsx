@@ -6,7 +6,7 @@ export default function Page() {
     <div className="w-full flex-1 flex flex-col justify-between gap-4 pb-2 md:pb-4">
       <div className="w-full flex flex-col items-center gap-4 md:gap-6 flex-1 min-h-0">
         <div className="w-full flex flex-col items-center gap-2 md:gap-3 shrink-0">
-          <h1 className="w-full relative text-2xl md:text-3xl lg:text-4xl leading-tight font-semibold text-center">
+          <h1 className="w-full relative text-xl md:text-3xl lg:text-4xl leading-tight font-semibold text-center">
             Entdecken Sie unsere agentenbasierte Versorgungsintelligenz
           </h1>
           <p className="w-full max-w-2xl relative text-sm md:text-base lg:text-lg leading-relaxed font-light inline-block text-center">
@@ -15,7 +15,7 @@ export default function Page() {
             Erstellung individueller Agenten.
           </p>
         </div>
-        
+
         <div className="w-full flex-1 relative min-h-[160px] text-left text-sm md:text-base rounded-2xl md:rounded-3xl overflow-hidden shadow-sm">
           <Image
             className="absolute top-0 left-0 w-full h-full object-cover"
@@ -49,7 +49,7 @@ export default function Page() {
 
       <div className="w-full flex flex-col items-center gap-4 md:gap-6 shrink-0 mt-2 md:mt-4">
         <div className="w-full flex flex-col items-center gap-1 md:gap-2 text-center">
-          <h2 className="w-full relative text-2xl md:text-3xl lg:text-4xl leading-tight font-semibold">
+          <h2 className="w-full relative text-xl md:text-3xl lg:text-4xl leading-tight font-semibold">
             Spürbare Entlastung für Sie, Ihr Team <br />
             und die gesamte Versorgung
           </h2>

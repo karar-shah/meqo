@@ -20,14 +20,14 @@ export default function FeatureView({
     return (
       <>
         {/* End Page Main Content */}
-        <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10 w-full max-w-4xl">
+        <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10 w-full max-w-[789px]">
           <div className="bg-[#f4f5f8] rounded-[2rem] p-8 md:p-10 flex flex-col items-center text-center w-[90%] max-w-[460px] shadow-xl mx-auto">
             <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mb-6 shrink-0 bg-gray-200">
-              <Image 
-                src="/images/Mask group1.png" 
-                alt="Profile" 
-                width={112} 
-                height={112} 
+              <Image
+                src="/images/Mask group1.png"
+                alt="Profile"
+                width={112}
+                height={112}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -50,7 +50,7 @@ export default function FeatureView({
             </div>
           </div>
           <div
-            className="mt-8 md:mt-12 w-full max-w-4xl relative text-2xl md:text-3xl lg:text-4xl leading-tight font-medium text-white text-center inline-block px-4"
+            className="mt-8 md:mt-12 w-full max-w-4xl relative text-2xl md:text-3xl  leading-tight font-medium text-white text-center inline-block px-4"
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </div>
@@ -64,10 +64,10 @@ export default function FeatureView({
   return (
     <>
       {/* Wrapper inside main that takes the standard width */}
-      <div className="w-full max-w-7xl flex flex-col lg:flex-row text-left font-['Archivo'] relative z-0 items-center justify-start gap-8 lg:gap-12 flex-1 lg:h-full lg:min-h-0">
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row text-left font-['Archivo'] relative z-0 items-center justify-start gap-2 lg:gap-12 flex-1 lg:h-full lg:min-h-0">
 
         {/* Texts Section */}
-        <div className="flex flex-col items-center justify-center md:justify-start gap-4 md:gap-6 text-[#d3e978] w-full lg:w-[420px] shrink-0 relative z-30 pt-8 lg:pt-0">
+        <div className="flex flex-col items-start justify-center md:justify-start gap-4 md:gap-6 text-[#d3e978] w-full lg:w-[420px] shrink-0 relative z-30 pt-8 lg:pt-0">
           <div className="flex flex-col gap-2">
             <div className="text-base md:text-lg leading-tight font-semibold">
               {category}

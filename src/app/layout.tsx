@@ -44,11 +44,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`light ${archivo.variable}`} style={{ colorScheme: 'light' }}>
-      <body className="flex flex-col bg-gray-100 font-sans text-sm antialiased select-none overflow-x-hidden lg:h-screen lg:overflow-hidden min-h-screen overflow-y-auto" style={{ overscrollBehavior: 'none' }}>
+      <body className="flex flex-col bg-gray-100 font-sans text-sm antialiased select-none overflow-x-hidden lg:h-screen  min-h-screen overflow-y-auto" style={{ overscrollBehavior: 'none' }}>
         <ThemeWrapper>
           <NavBar />
           {/* position:relative on the container above means the absolute arrows anchor here */}
-          <main className="flex-1 max-w-[789px] mx-auto w-full px-4 md:px-6 mt-20 md:mt-24 pt-2 pb-2 md:pb-4 flex flex-col items-center lg:min-h-0 lg:overflow-hidden">
+          <main className="flex-1 max-w-[789px] mx-auto w-full px-4 md:px-6 mt-20 md:mt-24 pt-2 pb-2 md:pb-4 flex flex-col items-center lg:min-h-0 ">
             <KioskShell>
               {children}
             </KioskShell>

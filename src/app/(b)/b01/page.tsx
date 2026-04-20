@@ -22,12 +22,12 @@ export default function B01Page() {
   return (
     <div className="flex flex-col justify-between w-full flex-1">
       <div className="w-full max-w-5xl flex flex-col items-start gap-3 md:gap-4 text-left">
-        <h1 className="w-full text-lg md:text-xl lg:text-2xl leading-tight font-semibold text-[#0e0f27]">
-          MEQO Copilot &ndash; die intelligente Schicht <br /> über Ihrer bestehenden IT
+        <h1 className="w-full text-lg md:text-xl lg:text-3xl leading-tight font-medium text-[#0e0f27] md:mb-6 mb-3">
+          MEQO Copilot &ndash; die intelligente Schicht über Ihrer bestehenden IT
         </h1>
 
         {/* Video Player Area */}
-        <div className="w-full h-[200px] md:h-[260px] lg:h-[340px] relative rounded-2xl md:rounded-3xl overflow-hidden transform-gpu [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
+        <div className="w-full md:mb-4 mb-2  h-[200px] md:h-[260px] lg:h-[340px] relative rounded-2xl md:rounded-3xl overflow-hidden transform-gpu [-webkit-mask-image:-webkit-radial-gradient(white,black)]">
           {/* Custom styles to scale up native video controls for touch display */}
           <style dangerouslySetInnerHTML={{
             __html: `
@@ -75,14 +75,14 @@ export default function B01Page() {
         {/* Text Content */}
         <div className="w-full flex flex-col gap-3 md:gap-4 text-xs md:text-sm lg:text-base leading-relaxed font-normal">
           <p>
-            MEQO Copilot verbindet Ihre bestehenden Systeme &ndash; <br />
-            <span className="font-semibold">KIS, Labor, Radiologie und Vitaldaten</span> &ndash; und macht daraus eine <br />
-            handlungsfähige Versorgungsintelligenz. Kein weiteres System, sondern als <br />
-            intelligente Schicht über Ihrer bestehenden IT.
+            MEQO Copilot verbindet Ihre bestehenden Systeme &ndash;{" "}
+            <span className="font-semibold">KIS, Labor, Radiologie und Vitaldaten</span>{" "}
+            &ndash; und macht daraus eine handlungsfähige Versorgungsintelligenz. Kein weiteres System,
+            sondern als intelligente Schicht über Ihrer bestehenden IT.
           </p>
           <p>
-            Wir unterstützen nicht nur die intelligente Automatisierung von Prozessen, <br />
-            sondern machen auch Expertenwissen breit verfügbar und für andere <br />
+            Wir unterstützen nicht nur die intelligente Automatisierung von Prozessen,
+            sondern machen auch Expertenwissen breit verfügbar und für andere
             Anwender:innen nutzbar.
           </p>
         </div>
