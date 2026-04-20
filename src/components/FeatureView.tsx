@@ -21,15 +21,34 @@ export default function FeatureView({
       <>
         {/* End Page Main Content */}
         <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-10 w-full max-w-4xl">
-          <Image
-            src={centerImage}
-            alt="Feature Card"
-            width={1363}
-            height={1490}
-            className="w-auto h-[40vh] max-h-[600px] object-contain"
-            priority
-            loading="eager"
-          />
+          <div className="bg-[#f4f5f8] rounded-[2rem] p-8 md:p-10 flex flex-col items-center text-center w-[90%] max-w-[460px] shadow-xl mx-auto">
+            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mb-6 shrink-0 bg-gray-200">
+              <Image 
+                src="/images/Mask group1.png" 
+                alt="Profile" 
+                width={112} 
+                height={112} 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h2 className="text-[#0e0f27] text-2xl md:text-3xl font-medium mb-6">
+              Interesse geweckt?
+            </h2>
+            <div className="text-[#0e0f27] text-base md:text-lg flex flex-col gap-6 font-light">
+              <p className="leading-relaxed">
+                Gerne berate ich Sie in einem<br />persönlichen Gespräch.
+              </p>
+              <p>
+                hallo@meqo.de
+              </p>
+              <p className="leading-relaxed">
+                <span className="font-semibold">Mehr erfahren:</span><br />
+                <a href="http://www.meqo.de/" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
+                  http://www.meqo.de/
+                </a>
+              </p>
+            </div>
+          </div>
           <div
             className="mt-8 md:mt-12 w-full max-w-4xl relative text-2xl md:text-3xl lg:text-4xl leading-tight font-medium text-white text-center inline-block px-4"
             dangerouslySetInnerHTML={{ __html: title }}

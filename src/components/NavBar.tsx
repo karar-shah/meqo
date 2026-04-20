@@ -27,14 +27,16 @@ export default function NavBar(props: NavBarProps) {
           className={`h-6 md:h-7 lg:h-8 w-auto relative ${filterClass}`}
           style={{ width: "auto" }}
         />
-        <Image
-          src={isDarkPage ? "/Logo_R 2.svg" : "/Logo_R 1.svg"}
-          alt="Prof Valmed"
-          width={625}
-          height={115}
-          className="h-6 md:h-7 lg:h-8 w-auto relative"
-          style={{ width: "auto" }}
-        />
+        {!(pathname.startsWith("/f") || pathname.startsWith("/g")) ?
+          <Image
+            src={isDarkPage ? "/Logo_R 2.svg" : "/Logo_R 1.svg"}
+            alt="Prof Valmed"
+            width={625}
+            height={115}
+            className="h-6 md:h-7 lg:h-8 w-auto relative"
+            style={{ width: "auto" }}
+          /> : (
+            null)}
       </div>
     </header>
   );
