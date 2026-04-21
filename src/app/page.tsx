@@ -1,7 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
+
   return (
     <>
       <div className="w-[1840px] flex flex-col items-start gap-[104px]">
@@ -31,6 +43,7 @@ export default function Page() {
           </div>
           <Link
             href="/d01"
+            onPointerDown={(e) => handlePointerDown(e, "/d01")}
             className="absolute top-[520px] left-[calc(50%-369px)] shadow-[0px_0px_100px_#0e0f27] rounded-[48px] bg-[#d3e978] h-[180px] flex items-center justify-center py-[32px] px-[64px] box-border gap-[32px] cursor-pointer transition-all duration-75 active:opacity-80 active:scale-[0.98] drop-shadow-xl"
           >
             <Image
@@ -61,6 +74,7 @@ export default function Page() {
         <div className="w-full h-[800px] flex items-center gap-[48px] text-left text-[56px]">
           <Link
             href="/b01"
+            onPointerDown={(e) => handlePointerDown(e, "/b01")}
             className="h-[800px] w-[896px] rounded-[100px] bg-[#f3f3f7] flex flex-col items-center justify-center pt-[120px] pb-0 px-0 box-border gap-[80px] cursor-pointer hover:bg-[#e4e4e9] transition-colors"
           >
             <div className="h-[120px] flex flex-col items-start pt-[12px] pb-0 px-0 box-border">
@@ -84,6 +98,7 @@ export default function Page() {
           </Link>
           <Link
             href="/b04"
+            onPointerDown={(e) => handlePointerDown(e, "/b04")}
             className="h-[800px] w-[896px] rounded-[100px] bg-[#f3f3f7] flex flex-col items-center justify-center pt-[120px] px-[120px] pb-0 box-border gap-[80px] cursor-pointer hover:bg-[#e4e4e9] transition-colors"
           >
             <Image
