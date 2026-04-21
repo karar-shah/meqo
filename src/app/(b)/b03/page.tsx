@@ -19,7 +19,7 @@ export default function B03Page() {
   const features = [
     {
       title: "Smartere Prozesse",
-      description: "Teamkommunikation und Zusammenarbeit deutlich vereinfachen &ndash; von Übergaben bis Konsilanfragen."
+      description: <>Teamkommunikation und Zusammenarbeit deutlich vereinfachen &ndash; von Übergaben bis Konsilanfragen.</>
     },
     {
       title: "Mehr Sicherheit",
@@ -27,7 +27,7 @@ export default function B03Page() {
     },
     {
       title: "Bessere Entscheidungen",
-      description: "Das Agenten-Team denkt mit, prüft und empfiehlt &ndash; und entlastet so das medizinische Personal."
+      description: <>Das Agenten-Team denkt mit, prüft und empfiehlt &ndash; und entlastet so das medizinische Personal.</>
     }
   ];
 
