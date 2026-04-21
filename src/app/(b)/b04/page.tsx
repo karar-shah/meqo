@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function B02Page() {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
 
     const checklist = [
         {
@@ -90,6 +101,7 @@ export default function B02Page() {
                 <div className="w-full flex flex-row items-center justify-center gap-[64px] text-[56px]">
                     <Link
                         href={"/d01"}
+                        onPointerDown={(e) => handlePointerDown(e, "/d01")}
                         className="h-[180px] w-[592px] rounded-[48px] bg-[#0e0f27] flex items-center justify-center px-[64px] box-border gap-[32px] cursor-pointer text-white transition-opacity hover:opacity-90"
 
                     >
@@ -107,6 +119,7 @@ export default function B02Page() {
 
                     <Link
                         href={"/"}
+                        onPointerDown={(e) => handlePointerDown(e, "/")}
                         className="h-[180px] w-[592px] rounded-[48px] border-4 border-[#0e0f27] bg-white flex items-center justify-center px-[64px] box-border gap-[32px] cursor-pointer text-[#0e0f27] transition-colors hover:bg-gray-50"
 
                     >

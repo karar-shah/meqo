@@ -1,9 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import BottomNavigation from "@/components/BottomNavigation";
 import Customers from "../../components/Customers";
 
 export default function B03Page() {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
 
   const features = [
     {
@@ -61,6 +72,7 @@ export default function B03Page() {
           </div>
           <Link
             href="/d01"
+            onPointerDown={(e) => handlePointerDown(e, "/d01")}
             className="absolute top-[520px] left-[calc(50%-369px)] shadow-[0px_0px_100px_#0e0f27] rounded-[48px] bg-[#d3e978] h-[180px] flex items-center justify-center py-[32px] px-[64px] box-border gap-[32px] cursor-pointer transition-opacity active:opacity-80 drop-shadow-xl"
           >
             <Image

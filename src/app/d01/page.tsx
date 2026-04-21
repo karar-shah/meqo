@@ -1,8 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import BottomNavigation from "@/components/BottomNavigation";
 
 export default function D01Page() {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
+
   return (
     <div className="flex flex-col w-full items-center flex-1 text-white ">
       <div className="w-[1840px] flex flex-col items-end gap-[120px] mt-[651px] ">
@@ -13,6 +25,7 @@ export default function D01Page() {
         <div className="flex flex-col items-center gap-[76px] w-full text-left text-[56px]">
           {/* Prompt 1 */}
           <Link href="/e01"
+            onPointerDown={(e) => handlePointerDown(e, "/e01")}
             className="w-[1520px] rounded-[100px] bg-white/20 flex items-center justify-center p-[100px] box-border gap-[48px] cursor-pointer hover:bg-white/30 transition-all active:opacity-90 active:scale-[0.99]">
             <div className="flex-1 relative leading-[150%] font-light">
               Benachrichte mich, wenn Vanco-Spiegel und Kreatinin da ist.
@@ -29,6 +42,7 @@ export default function D01Page() {
 
           {/* Prompt 2 */}
           <Link href="/f01"
+            onPointerDown={(e) => handlePointerDown(e, "/f01")}
             className="w-[1520px] rounded-[100px] bg-white/20 flex items-center justify-center p-[100px] box-border gap-[48px] cursor-pointer hover:bg-white/30 transition-all active:opacity-90 active:scale-[0.99]">
             <div className="flex-1 relative leading-[150%] font-light">
               Prüfe alle Arztbriefe und Laborbefunde,
@@ -46,6 +60,7 @@ export default function D01Page() {
 
           {/* Prompt 3 */}
           <Link href="/g01"
+            onPointerDown={(e) => handlePointerDown(e, "/g01")}
             className="w-[1520px] rounded-[100px] bg-white/20 flex items-center justify-center p-[100px] box-border gap-[48px] cursor-pointer hover:bg-white/30 transition-all active:opacity-90 active:scale-[0.99]">
             <div className="flex-1 relative leading-[150%] font-light">
               Frau Müller kann nicht alleine in ihre Wohnung im 3. Stock

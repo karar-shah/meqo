@@ -1,5 +1,8 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface BottomNavigationProps {
   prevHref?: string;
@@ -24,6 +27,15 @@ export default function BottomNavigation({
   theme = "light",
   position = "default",
 }: BottomNavigationProps) {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
+
   const isDark = theme === "dark";
 
   // General button styling depending on theme
@@ -55,7 +67,7 @@ export default function BottomNavigation({
       {position === "default" && (
         <div className="flex-1 flex justify-start">
           {showPrev && (
-            <Link href={prevHref} className={plainButtonClass}>
+            <Link href={prevHref} onPointerDown={(e) => handlePointerDown(e, prevHref)} className={plainButtonClass}>
               <div className="h-[96px] w-[96px] relative shrink-0">
                 <Image 
                   src="/icons/arrow-narrow-right.svg" 
@@ -72,7 +84,7 @@ export default function BottomNavigation({
 
       <div className={`flex items-center justify-center ${position === "absolute" ? "gap-[64px]" : "flex-1 gap-[64px]"}`}>
         {showGrid && (
-          <Link href={gridHref} className={borderedButtonClass}>
+          <Link href={gridHref} onPointerDown={(e) => handlePointerDown(e, gridHref)} className={borderedButtonClass}>
             <div className="h-[96px] w-[96px] relative shrink-0">
               <Image 
                 src="/icons/grid-01.svg" 
@@ -84,7 +96,7 @@ export default function BottomNavigation({
             <span className="text-[56px] font-semibold leading-[150%]">Alle Beispiele</span>
           </Link>
         )}
-        <Link href={homeHref} className={borderedButtonClass}>
+        <Link href={homeHref} onPointerDown={(e) => handlePointerDown(e, homeHref)} className={borderedButtonClass}>
           <div className="h-[96px] w-[96px] relative shrink-0">
             <Image 
               src="/icons/home-smile.svg" 
@@ -100,7 +112,7 @@ export default function BottomNavigation({
       {position === "default" && (
         <div className="flex-1 flex justify-end">
           {showNext && (
-            <Link href={nextHref} className={plainButtonClass}>
+            <Link href={nextHref} onPointerDown={(e) => handlePointerDown(e, nextHref)} className={plainButtonClass}>
               <span className="text-[56px] font-semibold leading-[150%]">Nächste Seite</span>
               <div className="h-[96px] w-[96px] relative shrink-0">
                 <Image 
