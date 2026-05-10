@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function B02Page() {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
 
     const checklist = [
         {
@@ -91,6 +102,7 @@ export default function B02Page() {
                     <Link
                         href={"/d01"}
                         className="h-10 md:h-12 w-full md:w-auto md:min-w-[200px] max-w-sm rounded-xl md:rounded-2xl bg-[#0e0f27] flex items-center justify-center px-4 md:px-8 box-border gap-2 md:gap-3 cursor-pointer text-white transition-opacity hover:opacity-90"
+                        onPointerDown={(e) => handlePointerDown(e, "/d01")}
 
                     >
                         <div className="h-5 w-5 md:h-6 md:w-6 shrink-0 flex items-center justify-center relative">
@@ -108,6 +120,7 @@ export default function B02Page() {
                     <Link
                         href={"/"}
                         className="h-10 md:h-12 w-full md:w-auto md:min-w-[200px] max-w-sm rounded-xl md:rounded-2xl border md:border-2 border-[#0e0f27] bg-white flex items-center justify-center px-4 md:px-8 box-border gap-2 md:gap-3 cursor-pointer text-[#0e0f27] transition-colors hover:bg-gray-50"
+                        onPointerDown={(e) => handlePointerDown(e, "/")}
 
                     >
                         <div className="h-5 w-5 md:h-6 md:w-6 shrink-0 flex items-center justify-center relative">

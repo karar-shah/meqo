@@ -1,5 +1,8 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface BottomNavigationProps {
   prevHref?: string;
@@ -24,6 +27,15 @@ export default function BottomNavigation({
   theme = "light",
   position = "default",
 }: BottomNavigationProps) {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
+
   const isDark = theme === "dark";
 
   // General button styling depending on theme

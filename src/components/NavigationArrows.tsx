@@ -19,6 +19,13 @@ export default function NavigationArrows() {
   const next = getNext(pathname);
   const prev = getPrev(pathname);
 
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
+
   // ── Swipe state ─────────────────────────────────────────────────────────
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const [hint, setHint] = useState<{

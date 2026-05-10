@@ -1,7 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
+  const router = useRouter();
+
+  const handlePointerDown = (e: React.PointerEvent, href: string) => {
+    // Only trigger for primary pointer (left click / touch)
+    if (e.button === 0) {
+      router.push(href);
+    }
+  };
+
   return (
     <div className="w-full flex-1 flex flex-col justify-between gap-4 pb-2 md:pb-4">
       <div className="w-full flex flex-col items-center gap-4 md:gap-6 flex-1 min-h-0">
@@ -31,7 +43,8 @@ export default function Page() {
           <Link
             href="/d01"
             className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 shadow-[0px_0px_60px_#0e0f27] rounded-2xl md:rounded-3xl bg-[#d3e978] h-12 md:h-14 flex items-center justify-center px-6 md:px-8 box-border gap-2 cursor-pointer transition-all duration-75 active:opacity-80 active:scale-[0.98] drop-shadow-xl w-max z-10"
-          >
+            onPointerDown={(e) => handlePointerDown(e, "/d01")}
+            >
             <Image
               className="h-6 w-6 relative"
               width={40}
@@ -61,7 +74,8 @@ export default function Page() {
           <Link
             href="/b01"
             className="flex-1 rounded-2xl md:rounded-3xl bg-[#f3f3f7] flex flex-col items-center justify-between pt-6 md:pt-8 pb-0 px-0 box-border gap-3 cursor-pointer hover:bg-[#e4e4e9] transition-colors min-h-[140px] md:min-h-[160px]"
-          >
+            onPointerDown={(e) => handlePointerDown(e, "/b01")}
+            >
             <div className="flex flex-col items-center justify-center flex-1 w-full pt-2 px-4">
               <Image
                 className="h-8 md:h-10 w-auto relative object-contain"
@@ -81,7 +95,9 @@ export default function Page() {
           <Link
             href="/b04"
             className="flex-1 rounded-2xl md:rounded-3xl bg-[#f3f3f7] flex flex-col items-center justify-between pt-6 md:pt-8 pb-0 px-4 box-border gap-3 cursor-pointer hover:bg-[#e4e4e9] transition-colors min-h-[140px] md:min-h-[160px]"
-          >
+            onPointerDown={(e) => handlePointerDown(e, "/b04")}
+
+            >
             <div className="flex flex-col items-center justify-center flex-1 w-full pt-2 px-4">
               <Image
                 className="h-8 md:h-10 w-auto relative object-contain max-h-full shrink-0"
