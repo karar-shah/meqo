@@ -52,74 +52,74 @@ export default function BottomNavigation({
   const iconFilter = isDark ? "brightness-0 invert" : "";
 
   // The centered bordered button style (Home, Grid)
-  const borderedButtonClass = `flex items-center justify-center gap-[32px] h-[180px] w-[592px] rounded-[48px] border-4 transition-colors ${isDark ? "border-white bg-[#0e0f27]/0" : "border-[#0e0f27]"
+  const borderedButtonClass = `flex items-center justify-center gap-2 h-10 md:h-11 px-2 md:px-6 w-max min-w-[100px] md:min-w-[180px] rounded-xl border md:border-2 transition-colors ${isDark ? "border-white bg-[#0e0f27]/0" : "border-[#0e0f27]"
     } ${hoverBg} ${generalText}`;
 
   // The unbordered button style (Prev, Next)
-  const plainButtonClass = `flex items-center gap-[32px] h-[180px] py-[32px] px-[32px] rounded-[48px] transition-colors ${hoverBg} ${generalText}`;
+  const plainButtonClass = `flex items-center gap-2 h-10 md:h-11 py-1 px-3 md:px-4 rounded-xl transition-colors ${hoverBg} ${generalText}`;
 
   const containerClass = position === "absolute"
-    ? "absolute top-[3290px] left-1/2 -translate-x-1/2 flex items-center gap-[64px]"
-    : "w-[1840px] flex items-center justify-between pt-[80px]";
+    ? "relative w-full flex justify-center items-center gap-4 md:gap-6 mt-auto pb-4 z-50 shrink-0"
+    : "w-full max-w-7xl mx-auto flex items-center justify-between pt-3 md:pt-4 px-4";
 
   return (
     <div className={containerClass}>
       {position === "default" && (
         <div className="flex-1 flex justify-start">
           {showPrev && (
-            <Link href={prevHref} onPointerDown={(e) => handlePointerDown(e, prevHref)} className={plainButtonClass}>
-              <div className="h-[96px] w-[96px] relative shrink-0">
-                <Image 
-                  src="/icons/arrow-narrow-right.svg" 
-                  alt="Vorherige Seite" 
-                  fill 
-                  className={`object-contain rotate-180 ${iconFilter}`} 
+            <Link href={prevHref} className={plainButtonClass}>
+              <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
+                <Image
+                  src="/icons/arrow-narrow-right.svg"
+                  alt="Vorherige Seite"
+                  fill
+                  className={`object-contain rotate-180 ${iconFilter}`}
                 />
               </div>
-              <span className="text-[56px] font-semibold leading-[150%]">Vorherige Seite</span>
+              <span className="text-sm md:text-base font-semibold md:leading-relaxed">Vorherige Seite</span>
             </Link>
           )}
         </div>
       )}
 
-      <div className={`flex items-center justify-center ${position === "absolute" ? "gap-[64px]" : "flex-1 gap-[64px]"}`}>
+      <div className={`flex items-center justify-center ${position === "absolute" ? "gap-2 md:gap-4" : "flex-1 gap-2 md:gap-4"}`}>
         {showGrid && (
-          <Link href={gridHref} onPointerDown={(e) => handlePointerDown(e, gridHref)} className={borderedButtonClass}>
-            <div className="h-[96px] w-[96px] relative shrink-0">
-              <Image 
-                src="/icons/grid-01.svg" 
-                alt="Alle Beispiele" 
-                fill 
-                className={`object-contain ${iconFilter}`} 
+          <Link href={gridHref} className={borderedButtonClass}>
+            <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
+              <Image
+                src="/icons/grid-01.svg"
+                alt="Alle Beispiele"
+                fill
+                className={`object-contain ${iconFilter}`}
               />
             </div>
-            <span className="text-[56px] font-semibold leading-[150%]">Alle Beispiele</span>
+            <span className="text-sm md:text-base font-semibold md:leading-relaxed">Alle Beispiele</span>
           </Link>
         )}
-        <Link href={homeHref} onPointerDown={(e) => handlePointerDown(e, homeHref)} className={borderedButtonClass}>
-          <div className="h-[96px] w-[96px] relative shrink-0">
-            <Image 
-              src="/icons/home-smile.svg" 
-              alt="Startseite" 
-              fill 
-              className={`object-contain ${iconFilter}`} 
+        <Link href={homeHref} className={borderedButtonClass}>
+          <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
+            <Image
+              src="/icons/home-smile.svg"
+              alt="Startseite"
+              fill
+              className={`object-contain ${iconFilter}`}
             />
           </div>
-          <span className="text-[56px] font-semibold leading-[150%]">Startseite</span>
+          <span className="text-sm md:text-base font-semibold md:leading-relaxed">Startseite</span>
         </Link>
       </div>
 
       {position === "default" && (
         <div className="flex-1 flex justify-end">
           {showNext && (
-            <Link href={nextHref} onPointerDown={(e) => handlePointerDown(e, nextHref)} className={plainButtonClass}>
-              <span className="text-[56px] font-semibold leading-[150%]">Nächste Seite</span>
-              <div className="h-[96px] w-[96px] relative shrink-0">
-                <Image 
-                  src="/icons/arrow-narrow-right.svg" 
-                  alt="Nächste Seite" 
-                  fill 
-                  className={`object-contain ${iconFilter}`} 
+            <Link href={nextHref} className={plainButtonClass}>
+              <span className="text-sm md:text-base font-semibold leading-relaxed">Nächste Seite</span>
+              <div className="h-4 w-4 md:h-5 md:w-5 relative shrink-0">
+                <Image
+                  src="/icons/arrow-narrow-right.svg"
+                  alt="Nächste Seite"
+                  fill
+                  className={`object-contain ${iconFilter}`}
                 />
               </div>
             </Link>

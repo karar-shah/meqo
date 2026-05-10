@@ -122,55 +122,29 @@ export default function NavigationArrows() {
       <>
         {prev && (
           <div
-            onPointerDown={(e) => handlePointerDown(e, prev)}
-            style={{
-              width: "180px",
-              height: "180px",
-              borderRadius: "50%",
-              backgroundColor: "#3e3f51",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "fixed",
-              left: "64px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              cursor: "pointer",
-              zIndex: 200,
-            }}
+            onClick={() => router.push(prev)}
+            className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#3e3f51] flex items-center justify-center fixed left-4 md:left-8 top-1/2 -translate-y-1/2 cursor-pointer z-[200]"
           >
             <Image
               src="/icons/arrow-left.svg"
-              width={50}
-              height={50}
+              width={16}
+              height={16}
               alt="Previous"
+              className="md:w-5 md:h-5"
             />
           </div>
         )}
         {next && (
           <div
-            onPointerDown={(e) => handlePointerDown(e, next)}
-            style={{
-              width: "180px",
-              height: "180px",
-              borderRadius: "50%",
-              backgroundColor: "#3e3f51",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "fixed",
-              right: "64px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              cursor: "pointer",
-              zIndex: 200,
-            }}
+            onClick={() => router.push(next)}
+            className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#3e3f51] flex items-center justify-center fixed right-4 md:right-8 top-1/2 -translate-y-1/2 cursor-pointer z-[200]"
           >
             <Image
               src="/icons/arrow-right.svg"
-              width={50}
-              height={50}
+              width={16}
+              height={16}
               alt="Next"
+              className="md:w-5 md:h-5"
             />
           </div>
         )}
