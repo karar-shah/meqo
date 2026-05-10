@@ -42,8 +42,8 @@ export default function D01Page() {
 
           {/* Prompt 2 */}
           <Link href="/f01"
+            onPointerDown={(e: React.PointerEvent) => handlePointerDown(e, "/f01")}
             className="w-full rounded-2xl md:rounded-3xl bg-white/20 flex items-center justify-center p-4 md:p-6 box-border gap-4 md:gap-6 cursor-pointer hover:bg-white/30 transition-all active:opacity-90 active:scale-[0.99] shadow-xl">
-            onPointerDown={(e) => handlePointerDown(e, "/f01")}
 
             <div className="flex-1 relative leading-relaxed">
               Prüfe alle Arztbriefe und Laborbefunde,
@@ -61,8 +61,8 @@ export default function D01Page() {
 
           {/* Prompt 3 */}
           <Link href="/g01"
+            onPointerDown={(e: React.PointerEvent) => handlePointerDown(e, "/g01")}
             className="w-full rounded-2xl md:rounded-3xl bg-white/20 flex items-center justify-center p-4 md:p-6 box-border gap-4 md:gap-6 cursor-pointer hover:bg-white/30 transition-all active:opacity-90 active:scale-[0.99] shadow-xl">
-            onPointerDown={(e) => handlePointerDown(e, "/g01")}
             <div className="flex-1 relative leading-relaxed">
               Frau Müller kann nicht alleine in ihre Wohnung im 3. Stock
               entlassen werden. Organisiere mit dem Sozialdienst die Entlassung
